@@ -155,8 +155,7 @@ const start = () => {
       {
         type: "input",
         name: "newManager",
-        message:
-          "Which manager would you like to update the employee's manager to?",
+        message: "Who would you like to update the employee's manager to?",
       },
     ]);
   };
