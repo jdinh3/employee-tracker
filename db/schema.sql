@@ -9,6 +9,9 @@ CREATE TABLE department(
   PRIMARY KEY (id)
 );
 
+
+(department) <- role <- employee
+
 CREATE TABLE role(
   id INT NOT NULL AUTO_INCREMENT,
   title VARCHAR(30) NOT NULL,
@@ -25,7 +28,7 @@ CREATE TABLE employee(
   role_id INT NOT NULL,
   manager_id INT,
   FOREIGN KEY (role_id) REFERENCES role(id),
-  FOREIGN KEY (manager_id) REFERENCES role(id),
+  FOREIGN KEY (manager_id) REFERENCES employee(id),
   PRIMARY KEY (id)
 );
 
